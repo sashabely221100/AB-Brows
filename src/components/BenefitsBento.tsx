@@ -35,10 +35,10 @@ export function BenefitsBento() {
   return (
     <section
       id="training"
-      className="scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
+      className="content-section scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl">
+        <div className="reveal max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-[0.28em] text-[var(--accent)]">
             Обучение
           </p>
@@ -51,7 +51,7 @@ export function BenefitsBento() {
           {benefits.map((benefit, index) => (
             <article
               key={benefit.title}
-              className={`min-h-56 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] sm:p-7 ${benefit.className}`}
+              className={`reveal reveal-delay-${Math.min(index, 3)} hover-lift min-h-56 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] sm:p-7 ${benefit.className}`}
             >
               <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] text-sm text-[var(--accent)]">
                 {String(index + 1).padStart(2, '0')}

@@ -37,9 +37,12 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState(0)
 
   return (
-    <section id="faq" className="scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10">
+    <section
+      id="faq"
+      className="content-section scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
+    >
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.86fr_1.14fr]">
-        <div>
+        <div className="reveal">
           <p className="mb-4 text-sm uppercase tracking-[0.28em] text-[var(--accent)]">
             FAQ
           </p>
@@ -51,16 +54,18 @@ export function FAQ() {
         <div className="space-y-3">
           {faqs.map((item, index) => {
             const isOpen = openIndex === index
+            const buttonId = `faq-button-${index}`
             const contentId = `faq-content-${index}`
 
             return (
               <article
                 key={item.question}
-                className="overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-card)]"
+                className="hover-lift overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-card)]"
               >
                 <button
+                  id={buttonId}
                   type="button"
-                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left text-lg font-medium tracking-[-0.02em] text-[var(--text)] sm:px-6"
+                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left text-lg font-medium tracking-[-0.02em] text-[var(--text)] transition-colors hover:bg-[rgba(247,241,232,0.42)] sm:px-6"
                   aria-expanded={isOpen}
                   aria-controls={contentId}
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
@@ -75,6 +80,8 @@ export function FAQ() {
                 </button>
                 <div
                   id={contentId}
+                  role="region"
+                  aria-labelledby={buttonId}
                   className={`px-5 text-[var(--muted)] sm:px-6 ${
                     isOpen ? 'pb-6' : 'hidden'
                   }`}

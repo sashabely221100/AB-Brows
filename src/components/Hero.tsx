@@ -9,8 +9,8 @@ export function Hero() {
   return (
     <section className="relative">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.04fr_0.96fr] lg:px-10 lg:py-28">
-        <div className="max-w-3xl">
-          <p className="mb-6 inline-flex rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.72)] px-4 py-2 text-sm text-[var(--muted)] shadow-[var(--shadow-card)]">
+        <div className="reveal max-w-3xl">
+          <p className="hover-lift mb-6 inline-flex rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.72)] px-4 py-2 text-sm text-[var(--muted)] shadow-[var(--shadow-card)]">
             Онлайн-обучение аппаратному восстановлению бровей
           </p>
 
@@ -27,13 +27,13 @@ export function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href="#contact"
-              className="rounded-full bg-[var(--accent)] px-7 py-4 text-center font-medium text-[var(--surface)] shadow-[0_18px_42px_rgba(122,62,55,0.24)] transition hover:-translate-y-0.5 hover:bg-[#69342f]"
+              className="hover-lift rounded-full bg-[var(--accent)] px-7 py-4 text-center font-medium text-[var(--surface)] shadow-[0_18px_42px_rgba(122,62,55,0.24)] hover:bg-[#69342f]"
             >
               Узнать свободные даты
             </a>
             <a
               href="#process"
-              className="rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.72)] px-7 py-4 text-center font-medium text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)]"
+              className="hover-lift rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.72)] px-7 py-4 text-center font-medium text-[var(--text)]"
             >
               Как проходит обучение
             </a>
@@ -43,7 +43,7 @@ export function Hero() {
             {trustBadges.map((badge) => (
               <li
                 key={badge}
-                className="flex items-center gap-3 rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.62)] px-4 py-3"
+                className="hover-lift flex items-center gap-3 rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.62)] px-4 py-3"
               >
                 <span
                   className="h-2 w-2 rounded-full bg-[var(--accent)]"
@@ -56,11 +56,11 @@ export function Hero() {
         </div>
 
         <figure
-          className="relative min-h-[420px] overflow-hidden rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow-soft)] sm:min-h-[560px] sm:p-7"
+          className="reveal reveal-delay-1 hover-lift relative min-h-[420px] overflow-hidden rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow-soft)] sm:min-h-[560px] sm:p-7"
           aria-label="Фото процедуры, временный декоративный placeholder"
         >
-          <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ead5c1] blur-3xl" />
-          <div className="absolute -bottom-28 left-8 h-80 w-80 rounded-full bg-[#d7b4a2] opacity-60 blur-3xl" />
+          <div className="ambient-drift absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ead5c1] blur-3xl" />
+          <div className="ambient-drift absolute -bottom-28 left-8 h-80 w-80 rounded-full bg-[#d7b4a2] opacity-60 blur-3xl" />
 
           <div className="relative flex h-full min-h-[380px] flex-col justify-between rounded-[2rem] border border-[rgba(229,216,202,0.8)] bg-[linear-gradient(145deg,#fff9ef_0%,#eadccd_58%,#d0a994_100%)] p-6 sm:min-h-[500px] sm:p-8">
             <div className="flex items-center justify-between text-sm text-[var(--muted)]">

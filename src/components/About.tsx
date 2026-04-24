@@ -1,7 +1,10 @@
 export function About() {
   return (
-    <section id="about" className="scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 rounded-[2.5rem] border border-[var(--border)] bg-[rgba(255,251,245,0.72)] p-6 shadow-[var(--shadow-card)] sm:p-8 lg:grid-cols-[0.86fr_1.14fr] lg:p-10">
+    <section
+      id="about"
+      className="content-section scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
+    >
+      <div className="reveal hover-lift mx-auto grid max-w-7xl items-center gap-10 rounded-[2.5rem] border border-[var(--border)] bg-[rgba(255,251,245,0.72)] p-6 shadow-[var(--shadow-card)] sm:p-8 lg:grid-cols-[0.86fr_1.14fr] lg:p-10">
         <figure
           className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[linear-gradient(150deg,#f7efe4,#e3cdb9_60%,#cda38e)] p-6"
           aria-label="Портрет специалиста, временный placeholder"

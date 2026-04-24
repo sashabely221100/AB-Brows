@@ -9,9 +9,9 @@ const items = [
 
 export function WhatStudentsGet() {
   return (
-    <section className="px-5 py-16 sm:px-8 lg:px-10">
+    <section className="content-section px-5 py-16 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div className="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <h2 className="max-w-2xl text-4xl font-medium tracking-[-0.05em] text-[var(--text)] sm:text-5xl">
             Что получает ученица
           </h2>
@@ -25,7 +25,7 @@ export function WhatStudentsGet() {
           {items.map((item) => (
             <article
               key={item}
-              className="rounded-[1.75rem] border border-[var(--border)] bg-[rgba(255,251,245,0.78)] p-6 shadow-[var(--shadow-card)]"
+              className="hover-lift rounded-[1.75rem] border border-[var(--border)] bg-[rgba(255,251,245,0.78)] p-6 shadow-[var(--shadow-card)]"
             >
               <span
                 className="mb-7 block h-px w-14 bg-[var(--accent)]"

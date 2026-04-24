@@ -15,7 +15,7 @@ export function Footer() {
           {channels.map((channel) => (
             <span
               key={channel}
-              className="rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.56)] px-4 py-2"
+              className="hover-lift rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.56)] px-4 py-2"
             >
               {channel}
             </span>

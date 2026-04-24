@@ -31,10 +31,10 @@ export function Results() {
   return (
     <section
       id="results"
-      className="scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
+      className="content-section scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl">
+        <div className="reveal max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-[0.28em] text-[var(--accent)]">
             Кейсы
           </p>
@@ -47,7 +47,7 @@ export function Results() {
           {cases.map((item) => (
             <article
               key={item.caption}
-              className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[var(--shadow-card)]"
+              className="hover-lift rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[var(--shadow-card)]"
             >
               <div className="grid grid-cols-2 gap-3">
                 <BeforeAfterPlaceholder label="До" />

@@ -9,9 +9,9 @@ export function HowItWorks() {
   return (
     <section
       id="process"
-      className="scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
+      className="content-section scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
     >
-      <div className="mx-auto max-w-7xl rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-soft)] sm:p-8 lg:p-10">
+      <div className="reveal hover-lift mx-auto max-w-7xl rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-soft)] sm:p-8 lg:p-10">
         <div className="max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-[0.28em] text-[var(--accent)]">
             Процесс
@@ -25,7 +25,7 @@ export function HowItWorks() {
           {steps.map((step, index) => (
             <li
               key={step}
-              className="relative rounded-[1.75rem] border border-[var(--border)] bg-[rgba(247,241,232,0.58)] p-6"
+              className="hover-lift relative rounded-[1.75rem] border border-[var(--border)] bg-[rgba(247,241,232,0.58)] p-6"
             >
               <span className="text-sm text-[var(--accent)]">
                 Шаг {index + 1}

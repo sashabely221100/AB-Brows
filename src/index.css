@@ -116,6 +116,11 @@ button:focus-visible {
   animation: drift 9s ease-in-out infinite alternate;
 }
 
+.eyebrow-menu-icon {
+  animation: menu-invite 2.4s ease-in-out infinite;
+  transform-origin: 50% 55%;
+}
+
 .content-section {
   content-visibility: auto;
   contain-intrinsic-size: 760px;
@@ -138,6 +143,20 @@ button:focus-visible {
   }
   to {
     transform: translate3d(0.75rem, -0.55rem, 0) scale(1.03);
+  }
+}
+
+@keyframes menu-invite {
+  0%,
+  68%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  76% {
+    transform: translateY(0.16rem) scale(0.98);
+  }
+  84% {
+    transform: translateY(-0.1rem) scale(1.02);
   }
 }
 

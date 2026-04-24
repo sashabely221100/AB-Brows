@@ -18,35 +18,8 @@ function MenuIcon({ isOpen }: { isOpen: boolean }) {
         aria-hidden="true"
         focusable="false"
       >
-        <path
-          d="M9 27.5C16 18 31 15.7 39 24.5"
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeWidth="2.2"
-        />
-        <path
-          d="M14 19.5C22 15 32 15.4 38 21"
-          fill="none"
-          opacity="0.48"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeWidth="1.5"
-        />
-        <path
-          d="M31 11L17 38"
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeWidth="3"
-        />
-        <path
-          d="M28.6 10.2L33.4 12.6"
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeWidth="2"
-        />
+        <path d="M15 15L33 33" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2.8" />
+        <path d="M33 15L15 33" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2.8" />
       </svg>
     )
   }
@@ -54,23 +27,35 @@ function MenuIcon({ isOpen }: { isOpen: boolean }) {
   return (
     <svg
       viewBox="0 0 48 48"
-      className="h-7 w-7"
+      className="eyebrow-menu-icon h-7 w-7"
       aria-hidden="true"
       focusable="false"
     >
       <path
-        d="M10 19C17.5 12.5 30.5 12.5 38 19"
+        d="M9 20.5C17.5 11.5 31.5 11.5 39 20"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
-        strokeWidth="2.4"
+        strokeWidth="2.6"
       />
       <path
-        d="M12 29C19 23 29 23 36 29"
+        d="M11.5 27.5C18.5 34 29.5 34 36.5 27.5C29.5 22 18.5 22 11.5 27.5Z"
+        fill="none"
+        stroke="currentColor"
+        strokeLinejoin="round"
+        strokeWidth="2.2"
+      />
+      <path
+        d="M24 25.4C25.65 25.4 27 26.75 27 28.4C27 30.05 25.65 31.4 24 31.4C22.35 31.4 21 30.05 21 28.4C21 26.75 22.35 25.4 24 25.4Z"
+        fill="currentColor"
+      />
+      <path
+        d="M15 30.2L13.2 33.1M19.5 32L18.8 35.2M24 32.5V35.9M28.5 32L29.2 35.2M33 30.2L34.8 33.1"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
-        strokeWidth="2.4"
+        strokeWidth="1.6"
+        opacity="0.72"
       />
     </svg>
   )
@@ -86,20 +71,21 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8 lg:px-10">
         <a
           href="#"
-          className="hover-lift flex items-center rounded-full"
+          className="flex items-center rounded-full"
           aria-label="AB Brows, перейти в начало"
           onClick={closeMenu}
         >
-          <picture>
+          <picture className="select-none">
             <source srcSet={logoMark} media="(max-width: 520px)" />
             <img
               src={logo}
               width="176"
               height="46"
               alt="AB Brows"
-              className="h-10 w-auto sm:h-11"
+              className="pointer-events-none h-10 w-auto select-none sm:h-11"
               decoding="async"
               fetchPriority="high"
+              draggable="false"
             />
           </picture>
         </a>

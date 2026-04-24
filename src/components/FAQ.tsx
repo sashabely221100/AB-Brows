@@ -41,8 +41,8 @@ export function FAQ() {
       id="faq"
       className="content-section scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
     >
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.86fr_1.14fr]">
-        <div className="reveal">
+      <div className="mx-auto max-w-4xl">
+        <div className="reveal max-w-2xl">
           <p className="mb-4 text-sm uppercase tracking-[0.28em] text-[var(--accent)]">
             FAQ
           </p>
@@ -51,7 +51,7 @@ export function FAQ() {
           </h2>
         </div>
 
-        <div className="space-y-3">
+        <div className="mt-9 w-full space-y-3 sm:mt-10">
           {faqs.map((item, index) => {
             const isOpen = openIndex === index
             const buttonId = `faq-button-${index}`
@@ -60,12 +60,12 @@ export function FAQ() {
             return (
               <article
                 key={item.question}
-                className="hover-lift overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-card)]"
+                className="overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-card)]"
               >
                 <button
                   id={buttonId}
                   type="button"
-                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left text-lg font-medium tracking-[-0.02em] text-[var(--text)] transition-colors hover:bg-[rgba(247,241,232,0.42)] sm:px-6"
+                  className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-base font-medium tracking-[-0.02em] text-[var(--text)] transition-colors hover:bg-[rgba(247,241,232,0.42)] sm:gap-5 sm:px-6 sm:text-lg"
                   aria-expanded={isOpen}
                   aria-controls={contentId}
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
@@ -86,7 +86,7 @@ export function FAQ() {
                     isOpen ? 'pb-6' : 'hidden'
                   }`}
                 >
-                  <p className="max-w-2xl leading-7">{item.answer}</p>
+                  <p className="max-w-3xl leading-7">{item.answer}</p>
                 </div>
               </article>
             )

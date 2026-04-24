@@ -31,6 +31,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  cursor: default;
   background:
     radial-gradient(circle at 15% 0%, rgba(255, 251, 245, 0.9), transparent 28rem),
     linear-gradient(180deg, var(--background), #f1e6da 100%);
@@ -46,6 +47,7 @@ body {
 
 a,
 button {
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 

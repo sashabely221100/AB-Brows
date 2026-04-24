@@ -2,32 +2,32 @@ const benefits = [
   {
     title: 'Редкая услуга с низкой конкуренцией',
     text: 'Помогает выделиться среди классических brow-услуг.',
-    className: 'md:col-span-2 xl:col-span-2',
+    className: 'md:col-span-2 lg:col-span-6',
   },
   {
     title: 'Процедура занимает 20–25 минут',
     text: 'Компактный формат легко встроить в рабочий день мастера.',
-    className: '',
+    className: 'lg:col-span-3',
   },
   {
     title: 'Можно повысить средний чек',
     text: 'Услуга закрывает более глубокий запрос клиента.',
-    className: '',
+    className: 'lg:col-span-3',
   },
   {
     title: 'Клиенты приходят за результатом',
     text: 'Фокус на восстановлении, а не на временной маскировке.',
-    className: 'md:col-span-2 xl:col-span-1',
+    className: 'lg:col-span-4',
   },
   {
     title: 'Подходит мастерам из Европы и СНГ',
     text: 'Онлайн-формат без привязки к городу.',
-    className: '',
+    className: 'lg:col-span-4',
   },
   {
     title: 'Практическое видео после обучения',
     text: 'После Zoom остаётся понятный визуальный ориентир.',
-    className: 'md:col-span-2 xl:col-span-2',
+    className: 'md:col-span-2 lg:col-span-4',
   },
 ]
 
@@ -47,21 +47,23 @@ export function BenefitsBento() {
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid auto-rows-fr gap-4 md:grid-cols-2 lg:grid-cols-12">
           {benefits.map((benefit, index) => (
             <article
               key={benefit.title}
-              className={`reveal reveal-delay-${Math.min(index, 3)} hover-lift min-h-56 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] sm:p-7 ${benefit.className}`}
+              className={`reveal reveal-delay-${Math.min(index, 3)} hover-lift flex min-h-56 flex-col rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] sm:p-7 ${benefit.className}`}
             >
-              <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] text-sm text-[var(--accent)]">
+              <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(247,241,232,0.42)] text-sm text-[var(--accent)]">
                 {String(index + 1).padStart(2, '0')}
               </div>
-              <h3 className="max-w-xl text-2xl font-medium leading-tight tracking-[-0.04em] text-[var(--text)]">
-                {benefit.title}
-              </h3>
-              <p className="mt-4 max-w-xl leading-7 text-[var(--muted)]">
-                {benefit.text}
-              </p>
+              <div className="mt-auto">
+                <h3 className="max-w-xl text-2xl font-medium leading-tight tracking-[-0.04em] text-[var(--text)]">
+                  {benefit.title}
+                </h3>
+                <p className="mt-4 max-w-xl leading-7 text-[var(--muted)]">
+                  {benefit.text}
+                </p>
+              </div>
             </article>
           ))}
         </div>

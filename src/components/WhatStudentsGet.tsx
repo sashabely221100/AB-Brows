@@ -1,10 +1,19 @@
+import {
+  IndicationsIcon,
+  MaterialsSourcingIcon,
+  PracticeVideoIcon,
+  ServiceSystemIcon,
+  TechniqueReviewIcon,
+  ZoomMeetingIcon,
+} from './StudentValueIcons'
+
 const items = [
-  'Zoom-встреча',
-  'Разбор техники',
-  'Материалы и закупка',
-  'Показания и противопоказания',
-  'Видео с отработкой на модели',
-  'Понятная система внедрения услуги',
+  { title: 'Zoom-встреча', Icon: ZoomMeetingIcon },
+  { title: 'Разбор техники', Icon: TechniqueReviewIcon },
+  { title: 'Материалы и закупка', Icon: MaterialsSourcingIcon },
+  { title: 'Показания и противопоказания', Icon: IndicationsIcon },
+  { title: 'Видео с отработкой на модели', Icon: PracticeVideoIcon },
+  { title: 'Понятная система внедрения услуги', Icon: ServiceSystemIcon },
 ]
 
 export function WhatStudentsGet() {
@@ -22,17 +31,20 @@ export function WhatStudentsGet() {
         </div>
 
         <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((item) => (
+          {items.map(({ title, Icon }) => (
             <article
-              key={item}
-              className="hover-lift rounded-[1.75rem] border border-[var(--border)] bg-[rgba(255,251,245,0.78)] p-6 shadow-[var(--shadow-card)]"
+              key={title}
+              className="hover-lift flex min-h-48 flex-col items-center justify-center rounded-[1.75rem] border border-[var(--border)] bg-[rgba(255,251,245,0.78)] p-6 text-center shadow-[var(--shadow-card)] sm:min-h-56"
             >
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(239,225,215,0.58)] text-[var(--accent)] sm:h-16 sm:w-16">
+                <Icon className="h-9 w-9 sm:h-10 sm:w-10" />
+              </div>
               <span
-                className="mb-7 block h-px w-14 bg-[var(--accent)]"
+                className="mb-5 block h-px w-14 bg-[var(--accent)] opacity-70"
                 aria-hidden="true"
               />
-              <h3 className="text-xl font-medium tracking-[-0.03em] text-[var(--text)]">
-                {item}
+              <h3 className="max-w-64 text-xl font-medium tracking-[-0.03em] text-[var(--text)]">
+                {title}
               </h3>
             </article>
           ))}

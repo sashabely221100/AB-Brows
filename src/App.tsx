@@ -7,6 +7,7 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
 import { Results } from './components/Results'
+import { ScrollToTopButton } from './components/ScrollToTopButton'
 import { WhatStudentsGet } from './components/WhatStudentsGet'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   )
 }

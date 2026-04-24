@@ -47,20 +47,20 @@ export function BenefitsBento() {
           </h2>
         </div>
 
-        <div className="mt-10 grid auto-rows-fr gap-4 md:grid-cols-2 lg:grid-cols-12">
+        <div className="mt-8 grid auto-rows-fr gap-4 md:grid-cols-2 lg:mt-10 lg:grid-cols-12">
           {benefits.map((benefit, index) => (
             <article
               key={benefit.title}
-              className={`reveal reveal-delay-${Math.min(index, 3)} hover-lift flex min-h-56 flex-col rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] sm:p-7 ${benefit.className}`}
+              className={`reveal reveal-delay-${Math.min(index, 3)} hover-lift min-h-[190px] rounded-[1.75rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] sm:min-h-[210px] md:p-8 lg:min-h-56 lg:rounded-[2rem] lg:p-9 ${benefit.className}`}
             >
-              <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(247,241,232,0.42)] text-sm text-[var(--accent)]">
-                {String(index + 1).padStart(2, '0')}
-              </div>
-              <div className="mt-auto">
-                <h3 className="max-w-xl text-2xl font-medium leading-tight tracking-[-0.04em] text-[var(--text)]">
+              <div className="flex h-full flex-col items-start text-left">
+                <div className="mb-7 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(247,241,232,0.42)] text-xs text-[var(--accent)] sm:h-11 sm:w-11 sm:text-sm">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <h3 className="max-w-xl text-[22px] font-medium leading-snug tracking-[-0.04em] text-[var(--text)] lg:text-2xl lg:leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="mt-4 max-w-xl leading-7 text-[var(--muted)]">
+                <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)] lg:leading-7">
                   {benefit.text}
                 </p>
               </div>

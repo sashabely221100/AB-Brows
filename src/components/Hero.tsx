@@ -11,17 +11,17 @@ export function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.04fr_0.96fr] lg:px-10 lg:py-28">
         <div className="reveal max-w-3xl">
           <p className="hover-lift mb-6 inline-flex rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.72)] px-4 py-2 text-sm text-[var(--muted)] shadow-[var(--shadow-card)]">
-            Онлайн-обучение аппаратному восстановлению бровей
+            Онлайн-обучение аппаратной работе с бровями
           </p>
 
           <h1 className="text-balance text-5xl font-medium leading-[0.98] tracking-[-0.06em] text-[var(--text)] sm:text-6xl lg:text-7xl">
-            Пока другие маскируют брови — мы возвращаем им рост
+            Пока другие маскируют брови — мы работаем с причиной
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
-            Онлайн-обучение аппаратному восстановлению бровей для мастеров,
-            которые хотят работать с причиной проблемы, повысить чек и добавить
-            редкую услугу в свой прайс.
+            Онлайн-обучение аппаратной работе с бровями для мастеров,
+            которые хотят глубже разбирать запрос клиента, развивать экспертный
+            подход и добавить редкую услугу в свой прайс.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -64,7 +64,7 @@ export function Hero() {
 
           <div className="relative flex h-full min-h-[380px] flex-col justify-between rounded-[2rem] border border-[rgba(229,216,202,0.8)] bg-[linear-gradient(145deg,#fff9ef_0%,#eadccd_58%,#d0a994_100%)] p-6 sm:min-h-[500px] sm:p-8">
             <div className="flex items-center justify-between text-sm text-[var(--muted)]">
-              <span>Vienna brow recovery</span>
+              <span>Vienna brow care</span>
               <span className="rounded-full bg-[rgba(255,251,245,0.68)] px-3 py-1">
                 20–25 минут
               </span>
@@ -79,8 +79,8 @@ export function Hero() {
                 Фото процедуры
               </p>
               <figcaption className="mt-3 max-w-sm text-2xl font-medium leading-tight tracking-[-0.04em] text-[var(--text)] sm:text-3xl">
-                Мягкий, аппаратный подход к восстановлению редких и
-                повреждённых бровей
+                Мягкий, аппаратный подход к деликатной работе с редкими и
+                ослабленными бровями
               </figcaption>
             </div>
           </div>

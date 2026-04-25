@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect width="180" height="180" rx="42" fill="#F7F1E8"/>
+  <text
+    x="90"
+    y="116"
+    text-anchor="middle"
+    fill="#7A3E37"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="94"
+    font-style="italic"
+    font-weight="700"
+    letter-spacing="-8"
+  >ab</text>
+</svg>

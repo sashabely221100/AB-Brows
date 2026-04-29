@@ -2,12 +2,17 @@ const benefits = [
   {
     title: 'Редкая услуга с низкой конкуренцией',
     text: 'Помогает выделиться среди классических brow-услуг.',
-    className: 'md:col-span-2 lg:col-span-6',
+    className: 'lg:col-span-4',
+  },
+  {
+    title: 'Подходит для себя',
+    text: 'Технику можно использовать как для работы с клиентами, так и для самостоятельного восстановления бровей дома.',
+    className: 'lg:col-span-4',
   },
   {
     title: 'Процедура занимает 20–25 минут',
     text: 'Компактный формат легко встроить в рабочий день мастера.',
-    className: 'lg:col-span-3',
+    className: 'lg:col-span-4',
   },
   {
     title: 'Можно повысить средний чек',
@@ -17,17 +22,17 @@ const benefits = [
   {
     title: 'Клиенты приходят с понятным запросом',
     text: 'Фокус на аккуратной работе с причиной, а не на временной маскировке.',
-    className: 'lg:col-span-4',
+    className: 'lg:col-span-3',
   },
   {
     title: 'Подходит мастерам из Европы и СНГ',
     text: 'Онлайн-формат без привязки к городу.',
-    className: 'lg:col-span-4',
+    className: 'lg:col-span-3',
   },
   {
     title: 'Практическое видео после обучения',
     text: 'После Zoom остаётся понятный визуальный ориентир.',
-    className: 'md:col-span-2 lg:col-span-4',
+    className: 'lg:col-span-3',
   },
 ]
 
@@ -51,16 +56,16 @@ export function BenefitsBento() {
           {benefits.map((benefit, index) => (
             <article
               key={benefit.title}
-              className={`reveal reveal-delay-${Math.min(index, 3)} hover-lift min-h-[190px] rounded-[1.75rem] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] sm:min-h-[210px] md:p-8 lg:min-h-56 lg:rounded-[2rem] lg:p-9 ${benefit.className}`}
+              className={`reveal reveal-delay-${Math.min(index, 3)} hover-lift min-h-[165px] rounded-[1.75rem] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow-card)] sm:min-h-[178px] md:min-h-[188px] md:p-6 lg:min-h-[190px] lg:rounded-[2rem] lg:p-7 ${benefit.className}`}
             >
               <div className="flex h-full flex-col items-start text-left">
-                <div className="mb-7 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(247,241,232,0.42)] text-xs text-[var(--accent)] sm:h-11 sm:w-11 sm:text-sm">
+                <div className="mb-5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[rgba(247,241,232,0.42)] text-xs text-[var(--accent)] sm:text-sm">
                   {String(index + 1).padStart(2, '0')}
                 </div>
-                <h3 className="max-w-xl text-[22px] font-medium leading-snug tracking-[-0.04em] text-[var(--text)] lg:text-2xl lg:leading-tight">
+                <h3 className="max-w-xl text-[21px] font-medium leading-snug tracking-[-0.04em] text-[var(--text)] lg:text-[22px]">
                   {benefit.title}
                 </h3>
-                <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)] lg:leading-7">
+                <p className="mt-3 max-w-xl text-base leading-relaxed text-[var(--muted)] lg:leading-7">
                   {benefit.text}
                 </p>
               </div>

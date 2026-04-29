@@ -11,6 +11,7 @@
   --accent-soft: #efe1d7;
   --shadow-soft: 0 24px 80px rgba(71, 45, 32, 0.12);
   --shadow-card: 0 18px 48px rgba(71, 45, 32, 0.08);
+  --shadow-hover: 0 28px 72px rgba(71, 45, 32, 0.16);
 
   font-family:
     "Avenir Next", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
@@ -30,6 +31,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  cursor: default;
   background:
     radial-gradient(circle at 15% 0%, rgba(255, 251, 245, 0.9), transparent 28rem),
     linear-gradient(180deg, var(--background), #f1e6da 100%);
@@ -45,6 +47,7 @@ body {
 
 a,
 button {
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -57,4 +60,117 @@ button:focus-visible {
 ::selection {
   color: var(--surface);
   background: var(--accent);
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--surface);
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.hover-lift {
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    background-color 260ms ease;
+}
+
+@media (hover: hover) {
+  .hover-lift:hover {
+    transform: translateY(-0.28rem);
+    border-color: rgba(122, 62, 55, 0.28);
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+.reveal {
+  animation: fade-up 620ms ease both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 90ms;
+}
+
+.reveal-delay-2 {
+  animation-delay: 180ms;
+}
+
+.reveal-delay-3 {
+  animation-delay: 270ms;
+}
+
+.ambient-drift {
+  animation: drift 9s ease-in-out infinite alternate;
+}
+
+.eyebrow-menu-icon {
+  animation: menu-invite 2.4s ease-in-out infinite;
+  transform-origin: 50% 55%;
+}
+
+.content-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 760px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(0.75rem, -0.55rem, 0) scale(1.03);
+  }
+}
+
+@keyframes menu-invite {
+  0%,
+  68%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  76% {
+    transform: translateY(0.16rem) scale(0.98);
+  }
+  84% {
+    transform: translateY(-0.1rem) scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
 }

@@ -7,13 +7,17 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
 import { Results } from './components/Results'
+import { ScrollToTopButton } from './components/ScrollToTopButton'
 import { WhatStudentsGet } from './components/WhatStudentsGet'
 
 function App() {
   return (
     <div className="min-h-screen overflow-hidden bg-[var(--background)] text-[var(--text)]">
+      <a href="#main-content" className="skip-link">
+        Перейти к содержанию
+      </a>
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <About />
         <BenefitsBento />
@@ -24,6 +28,7 @@ function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   )
 }

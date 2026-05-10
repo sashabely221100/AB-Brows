@@ -1,26 +1,52 @@
+import caseOneAfterImage from '../assets/results/result-case-1-after.jpg'
+import caseOneBeforeImage from '../assets/results/result-case-1-before.jpg'
+import caseTwoAfterImage from '../assets/results/result-case-2-after.jpg'
+import caseTwoBeforeImage from '../assets/results/result-case-2-before.jpg'
+import caseThreeAfterImage from '../assets/results/result-case-3-after.jpg'
+import caseThreeBeforeImage from '../assets/results/result-case-3-before.jpg'
+
 const cases = [
   {
     caption: 'Редкие участки',
-    subcaption: 'Пример визуальной динамики, 1 процедура',
+    subcaption: 'Реальный пример после 4 процедур',
+    beforeImage: caseOneBeforeImage,
+    afterImage: caseOneAfterImage,
   },
   {
     caption: 'Неравномерная плотность',
-    subcaption: 'Пример визуальной динамики, 2 процедуры',
+    subcaption: 'Реальный пример после 4 процедур',
+    beforeImage: caseTwoBeforeImage,
+    afterImage: caseTwoAfterImage,
   },
   {
     caption: 'Ослабленные после окрашивания',
-    subcaption: 'Пример визуальной динамики, 3 процедуры',
+    subcaption: 'Реальный пример после 4 процедур',
+    beforeImage: caseThreeBeforeImage,
+    afterImage: caseThreeAfterImage,
   },
 ]
 
-function BeforeAfterPlaceholder({ label }: { label: 'До' | 'После' }) {
+function BeforeAfterImage({
+  image,
+  label,
+}: {
+  image: string
+  label: 'До' | 'После'
+}) {
   return (
     <div
-      className="relative flex min-h-52 items-end overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[linear-gradient(145deg,#fff8ef,#ead9c8)] p-4"
-      aria-label={`${label}, временный placeholder примера`}
+      className="relative aspect-[9/8] overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[linear-gradient(145deg,#fff8ef,#ead9c8)]"
+      aria-label={`${label}, фото примера процедуры`}
     >
-      <div className="absolute left-1/2 top-1/2 h-28 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(122,62,55,0.18)] bg-[rgba(255,251,245,0.42)]" />
-      <span className="relative rounded-full bg-[rgba(255,251,245,0.76)] px-4 py-2 text-sm text-[var(--muted)]">
+      <img
+        src={image}
+        alt=""
+        className="h-full w-full object-cover"
+        loading="lazy"
+        decoding="async"
+        aria-hidden="true"
+      />
+      <span className="absolute bottom-4 left-4 rounded-full bg-[rgba(255,251,245,0.82)] px-4 py-2 text-sm text-[var(--muted)] shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
         {label}
       </span>
     </div>
@@ -39,12 +65,12 @@ export function Results() {
             Кейсы
           </p>
           <h2 className="text-4xl font-medium tracking-[-0.05em] text-[var(--text)] sm:text-5xl">
-            Примеры процедуры
+            Результаты процедуры
           </h2>
           <p className="mt-5 max-w-2xl leading-7 text-[var(--muted)]">
-            Фотографии позже будут заменены реальными материалами специалиста.
-            Любая динамика индивидуальна и не является гарантией одинакового
-            результата.
+            Реальные примеры после 4 процедур: новые волоски в зонах с
+            длительным отсутствием роста. Динамика индивидуальна и не является
+            гарантией одинакового результата.
           </p>
         </div>
 
@@ -55,8 +81,8 @@ export function Results() {
               className="hover-lift rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[var(--shadow-card)]"
             >
               <div className="grid grid-cols-2 gap-3">
-                <BeforeAfterPlaceholder label="До" />
-                <BeforeAfterPlaceholder label="После" />
+                <BeforeAfterImage image={item.beforeImage} label="До" />
+                <BeforeAfterImage image={item.afterImage} label="После" />
               </div>
               <div className="p-3 pt-6">
                 <h3 className="text-xl font-medium tracking-[-0.03em] text-[var(--text)]">

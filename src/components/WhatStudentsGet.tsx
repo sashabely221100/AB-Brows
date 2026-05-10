@@ -49,6 +49,20 @@ export function WhatStudentsGet() {
             </article>
           ))}
         </div>
+
+        <article className="reveal hover-lift mt-5 rounded-[1.75rem] border border-[var(--border)] bg-[rgba(255,251,245,0.78)] p-6 shadow-[var(--shadow-card)] sm:p-7 lg:rounded-[2rem] lg:p-8">
+          <p className="mb-3 text-sm uppercase tracking-[0.28em] text-[var(--accent)]">
+            Дополнительно
+          </p>
+          <h3 className="text-2xl font-medium tracking-[-0.04em] text-[var(--text)]">
+            Дополнительное направление
+          </h3>
+          <p className="mt-4 max-w-3xl leading-7 text-[var(--muted)]">
+            Методика может быть адаптирована для работы с волосами по
+            отдельному протоколу. Если вам интересен комплекс «брови + волосы»,
+            это можно обсудить индивидуально перед записью.
+          </p>
+        </article>
       </div>
     </section>
   )

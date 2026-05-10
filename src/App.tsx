@@ -8,6 +8,7 @@ import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
 import { Results } from './components/Results'
 import { ScrollToTopButton } from './components/ScrollToTopButton'
+import { TrainingAudience } from './components/TrainingAudience'
 import { WhatStudentsGet } from './components/WhatStudentsGet'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Hero />
         <About />
         <BenefitsBento />
+        <TrainingAudience />
         <WhatStudentsGet />
         <HowItWorks />
         <Results />

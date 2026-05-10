@@ -57,7 +57,7 @@ export function Results() {
   return (
     <section
       id="results"
-      className="content-section scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
+      className="content-section scroll-mt-28 px-5 py-12 sm:px-8 sm:py-16 lg:px-10"
     >
       <div className="mx-auto max-w-7xl">
         <div className="reveal max-w-3xl">

@@ -8,7 +8,7 @@ import {
 } from './StudentValueIcons'
 
 const items = [
-  { title: 'Онлайн-встреча в удобном формате', Icon: OnlineMeetingIcon },
+  { title: 'Онлайн-обучение в удобном формате', Icon: OnlineMeetingIcon },
   { title: 'Разбор техники', Icon: TechniqueReviewIcon },
   { title: 'Материалы и закупка', Icon: MaterialsSourcingIcon },
   { title: 'Показания и противопоказания', Icon: IndicationsIcon },
@@ -18,7 +18,7 @@ const items = [
 
 export function WhatStudentsGet() {
   return (
-    <section className="content-section px-5 py-16 sm:px-8 lg:px-10">
+    <section className="content-section px-5 py-12 sm:px-8 sm:py-16 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <h2 className="max-w-2xl text-4xl font-medium tracking-[-0.05em] text-[var(--text)] sm:text-5xl">

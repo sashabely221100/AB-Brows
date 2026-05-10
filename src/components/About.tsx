@@ -4,7 +4,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="content-section scroll-mt-28 px-5 py-16 sm:px-8 lg:px-10"
+      className="content-section scroll-mt-28 px-5 py-12 sm:px-8 sm:py-16 lg:px-10"
     >
       <div className="reveal hover-lift mx-auto grid max-w-7xl items-center gap-10 rounded-[2.5rem] border border-[var(--border)] bg-[rgba(255,251,245,0.72)] p-6 shadow-[var(--shadow-card)] sm:p-8 lg:grid-cols-[0.86fr_1.14fr] lg:p-10">
         <div>
@@ -50,9 +50,10 @@ export function About() {
             </p>
           </div>
           <p className="mt-8 border-l border-[rgba(122,62,55,0.36)] pl-5 text-[1.04rem] leading-8 text-[var(--text)] sm:text-lg">
-            Если ты мастер и тоже хочешь помогать клиентам работать с такими
-            запросами аккуратно, структурно и без обещаний гарантированного
-            эффекта — ты сможешь этому научиться.
+            Если вы уже работаете с бровями, только начинаете путь в профессии
+            или хотите освоить процедуру для себя, на обучении вы разберёте
+            технику с опытным мастером: от материалов и противопоказаний до
+            аккуратного выполнения процедуры с доказанным эффектом.
           </p>
         </div>
       </div>

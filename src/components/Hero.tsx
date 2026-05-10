@@ -3,14 +3,14 @@ import heroProcedureImage from '../assets/images/hero-procedure-v1.jpg'
 const trustBadges = [
   '2,5+ года практики',
   'Онлайн для Европы и СНГ',
-  'Практическое видео после онлайн-встречи',
+  'Практическое видео после обучения',
   'Редкая услуга с низкой конкуренцией',
 ]
 
 export function Hero() {
   return (
     <section className="relative">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-8 sm:px-8 sm:pb-20 sm:pt-10 lg:grid-cols-[1.04fr_0.96fr] lg:px-10 lg:pb-28 lg:pt-14">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-12 pt-8 sm:px-8 sm:pb-20 sm:pt-10 lg:grid-cols-[1.04fr_0.96fr] lg:px-10 lg:pb-28 lg:pt-14">
         <div className="reveal max-w-3xl">
           <p className="hover-lift mb-6 inline-flex rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.72)] px-4 py-2 text-sm text-[var(--muted)] shadow-[var(--shadow-card)]">
             Онлайн-обучение аппаратной работе с бровями

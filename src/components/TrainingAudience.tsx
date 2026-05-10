@@ -15,7 +15,7 @@ const audienceCards = [
 
 export function TrainingAudience() {
   return (
-    <section className="content-section px-5 py-16 sm:px-8 lg:px-10">
+    <section className="content-section px-5 py-12 sm:px-8 sm:py-16 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>

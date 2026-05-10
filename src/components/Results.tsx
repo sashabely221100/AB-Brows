@@ -2,7 +2,7 @@ import caseOneAfterImage from '../assets/results/result-case-1-after.jpg'
 import caseOneBeforeImage from '../assets/results/result-case-1-before.jpg'
 import caseTwoAfterImage from '../assets/results/result-case-2-after.jpg'
 import caseTwoBeforeImage from '../assets/results/result-case-2-before.jpg'
-import caseThreeAfterImage from '../assets/results/result-case-3-after.jpg'
+import caseThreeAfterImage from '../assets/results/result-case-3-after-v2.jpg'
 import caseThreeBeforeImage from '../assets/results/result-case-3-before.jpg'
 
 const cases = [

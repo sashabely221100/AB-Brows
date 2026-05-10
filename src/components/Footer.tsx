@@ -1,4 +1,4 @@
-import logo from '../assets/logo-ab-brows.svg'
+import logo from '../assets/logo-ab-browws.svg'
 
 const channels = [
   { label: 'Telegram' },

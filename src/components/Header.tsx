@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logoMark from '../assets/logo-ab-mark.svg'
-import logo from '../assets/logo-ab-brows.svg'
+import logo from '../assets/logo-ab-browws.svg'
 
 const navLinks = [
   { href: '#about', label: 'Обо мне' },

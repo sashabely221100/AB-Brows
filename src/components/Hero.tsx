@@ -75,7 +75,7 @@ export function Hero() {
 
             <div className="absolute left-5 right-5 top-5 flex items-center justify-between gap-3 text-sm text-[var(--text)] sm:left-6 sm:right-6 sm:top-6">
               <span className="rounded-full bg-[rgba(255,251,245,0.74)] px-3 py-1 shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
-                Vienna brow care
+                Восстановление бровей
               </span>
               <span className="rounded-full bg-[rgba(255,251,245,0.74)] px-3 py-1 shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
                 20–25 минут

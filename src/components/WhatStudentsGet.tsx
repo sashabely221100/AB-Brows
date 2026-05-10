@@ -51,9 +51,6 @@ export function WhatStudentsGet() {
         </div>
 
         <article className="reveal hover-lift mt-5 rounded-[1.75rem] border border-[var(--border)] bg-[rgba(255,251,245,0.78)] p-6 shadow-[var(--shadow-card)] sm:p-7 lg:rounded-[2rem] lg:p-8">
-          <p className="mb-3 text-sm uppercase tracking-[0.28em] text-[var(--accent)]">
-            Дополнительно
-          </p>
           <h3 className="text-2xl font-medium tracking-[-0.04em] text-[var(--text)]">
             Дополнительное направление
           </h3>

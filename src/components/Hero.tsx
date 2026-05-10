@@ -3,7 +3,7 @@ import heroProcedureImage from '../assets/images/hero-procedure-v1.jpg'
 const trustBadges = [
   '2,5+ года практики',
   'Онлайн для Европы и СНГ',
-  'Практическое видео после Zoom',
+  'Практическое видео после онлайн-встречи',
   'Редкая услуга с низкой конкуренцией',
 ]
 

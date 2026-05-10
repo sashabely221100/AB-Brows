@@ -13,7 +13,7 @@ const baseProps = {
   viewBox: '0 0 64 64',
 } satisfies IconProps
 
-export function ZoomMeetingIcon(props: IconProps) {
+export function OnlineMeetingIcon(props: IconProps) {
   return (
     <svg {...baseProps} {...props}>
       <path d="M13 18.5h28a8 8 0 0 1 8 8v9a8 8 0 0 1-8 8H28.5L18 52v-8.5h-5a8 8 0 0 1-8-8v-9a8 8 0 0 1 8-8Z" />

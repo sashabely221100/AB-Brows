@@ -1,14 +1,14 @@
 import {
   IndicationsIcon,
   MaterialsSourcingIcon,
+  OnlineMeetingIcon,
   PracticeVideoIcon,
   ServiceSystemIcon,
   TechniqueReviewIcon,
-  ZoomMeetingIcon,
 } from './StudentValueIcons'
 
 const items = [
-  { title: 'Zoom-встреча', Icon: ZoomMeetingIcon },
+  { title: 'Онлайн-встреча в удобном формате', Icon: OnlineMeetingIcon },
   { title: 'Разбор техники', Icon: TechniqueReviewIcon },
   { title: 'Материалы и закупка', Icon: MaterialsSourcingIcon },
   { title: 'Показания и противопоказания', Icon: IndicationsIcon },

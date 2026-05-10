@@ -1,3 +1,5 @@
+import heroProcedureImage from '../assets/images/hero-procedure-v1.jpg'
+
 const trustBadges = [
   '2,5+ года практики',
   'Онлайн для Европы и СНГ',
@@ -15,7 +17,7 @@ export function Hero() {
           </p>
 
           <h1 className="text-balance text-5xl font-medium leading-[0.98] tracking-[-0.06em] text-[var(--text)] sm:text-6xl lg:text-7xl">
-            Пока другие маскируют брови — мы работаем с причиной
+            Другие маскируют брови — мы работаем с причиной
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
@@ -57,31 +59,27 @@ export function Hero() {
 
         <figure
           className="reveal reveal-delay-1 hover-lift relative min-h-[420px] overflow-hidden rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow-soft)] sm:min-h-[560px] sm:p-7"
-          aria-label="Фото процедуры, временный декоративный placeholder"
         >
           <div className="ambient-drift absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ead5c1] blur-3xl" />
           <div className="ambient-drift absolute -bottom-28 left-8 h-80 w-80 rounded-full bg-[#d7b4a2] opacity-60 blur-3xl" />
 
-          <div className="relative flex h-full min-h-[380px] flex-col justify-between rounded-[2rem] border border-[rgba(229,216,202,0.8)] bg-[linear-gradient(145deg,#fff9ef_0%,#eadccd_58%,#d0a994_100%)] p-6 sm:min-h-[500px] sm:p-8">
-            <div className="flex items-center justify-between text-sm text-[var(--muted)]">
-              <span>Vienna brow care</span>
-              <span className="rounded-full bg-[rgba(255,251,245,0.68)] px-3 py-1">
+          <div className="relative h-full min-h-[380px] overflow-hidden rounded-[2rem] border border-[rgba(229,216,202,0.8)] bg-[var(--cream-deep)] sm:min-h-[500px]">
+            <img
+              src={heroProcedureImage}
+              alt="Аппаратное восстановление бровей в процессе процедуры"
+              className="h-full min-h-[380px] w-full object-cover object-center sm:min-h-[500px]"
+              decoding="async"
+              fetchPriority="high"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(24,20,17,0.18)_0%,rgba(24,20,17,0.02)_34%,rgba(24,20,17,0.16)_100%)]" />
+
+            <div className="absolute left-5 right-5 top-5 flex items-center justify-between gap-3 text-sm text-[var(--text)] sm:left-6 sm:right-6 sm:top-6">
+              <span className="rounded-full bg-[rgba(255,251,245,0.74)] px-3 py-1 shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
+                Vienna brow care
+              </span>
+              <span className="rounded-full bg-[rgba(255,251,245,0.74)] px-3 py-1 shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
                 20–25 минут
               </span>
-            </div>
-
-            <div className="mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-[rgba(122,62,55,0.18)] bg-[rgba(255,251,245,0.28)] shadow-[inset_0_0_80px_rgba(255,251,245,0.46)] sm:h-72 sm:w-72">
-              <div className="h-32 w-32 rounded-full border border-[rgba(122,62,55,0.22)] sm:h-44 sm:w-44" />
-            </div>
-
-            <div>
-              <p className="text-xs uppercase tracking-[0.34em] text-[var(--accent)]">
-                Фото процедуры
-              </p>
-              <figcaption className="mt-3 max-w-sm text-2xl font-medium leading-tight tracking-[-0.04em] text-[var(--text)] sm:text-3xl">
-                Мягкий, аппаратный подход к деликатной работе с редкими и
-                ослабленными бровями
-              </figcaption>
             </div>
           </div>
         </figure>

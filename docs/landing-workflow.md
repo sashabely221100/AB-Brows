@@ -2,7 +2,7 @@
 
 ## Stable Baseline
 
-`main` keeps the current working MVP landing page safe. Use it as the stable
+`main` keeps the current working landing page safe. Use it as the stable
 baseline before starting content or layout experiments.
 
 ## Branches

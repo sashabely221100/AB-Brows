@@ -1,9 +1,11 @@
 import logo from '../assets/logo-ab-browws.svg'
 
 const channels = [
-  { label: 'Telegram' },
+  {
+    label: 'Telegram',
+    href: 'https://t.me/ab_browws_booking_bot?start=landing',
+  },
   { label: 'Instagram', href: 'https://www.instagram.com/ab.browws/' },
-  { label: 'WhatsApp' },
 ]
 
 export function Footer() {
@@ -32,26 +34,17 @@ export function Footer() {
           className="flex flex-wrap justify-center gap-2 md:justify-end"
           aria-label="Контактные каналы"
         >
-          {channels.map((channel) =>
-            channel.href ? (
-              <a
-                key={channel.label}
-                href={channel.href}
-                className="hover-lift rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.56)] px-4 py-2"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {channel.label}
-              </a>
-            ) : (
-              <span
-                key={channel.label}
-                className="hover-lift rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.56)] px-4 py-2"
-              >
-                {channel.label}
-              </span>
-            ),
-          )}
+          {channels.map((channel) => (
+            <a
+              key={channel.label}
+              href={channel.href}
+              className="hover-lift rounded-full border border-[var(--border)] bg-[rgba(255,251,245,0.56)] px-4 py-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {channel.label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

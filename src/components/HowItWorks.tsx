@@ -39,8 +39,8 @@ export function HowItWorks() {
 
         <div className="mt-8 rounded-[1.5rem] border border-[var(--border)] bg-[rgba(255,251,245,0.76)] p-5 leading-7 text-[var(--muted)]">
           <p className="font-medium text-[var(--text)]">
-            By continuing, you confirm that you have read the terms, privacy
-            policy, and cancellation policy.
+            Перед оплатой вы подтверждаете, что ознакомились с условиями
+            обучения, политикой конфиденциальности и правилами отмены записи.
           </p>
           <p className="mt-3">
             Оплата проходит внешне: для учениц из СНГ доступны инструкции для

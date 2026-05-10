@@ -1,3 +1,5 @@
+const telegramBotUrl = 'https://t.me/ab_browws_booking_bot?start=landing'
+
 export function FinalCTA() {
   return (
     <section
@@ -10,19 +12,24 @@ export function FinalCTA() {
             Следующий шаг
           </p>
           <h2 className="text-4xl font-medium leading-tight tracking-[-0.05em] text-[var(--text)] sm:text-5xl lg:text-6xl">
-            Хотите добавить в прайс редкую услугу и работать с запросами, от
-            которых раньше приходилось отказываться?
+            Готовы добавить в прайс редкую услугу?
           </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
+            Стоимость обучения: 9 500 ₽ / 110 € / 130 $. Перейдите в
+            Telegram-бота, чтобы посмотреть свободные даты и выбрать удобный
+            способ оплаты.
+          </p>
           <a
-            href="#contact"
+            href={telegramBotUrl}
             className="hover-lift mt-9 inline-flex rounded-full bg-[var(--accent)] px-8 py-4 text-center font-medium text-[var(--surface)] shadow-[0_18px_42px_rgba(122,62,55,0.24)] hover:bg-[#69342f]"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Узнать свободные даты
+            Открыть Telegram-бота
           </a>
           <p className="mt-5 max-w-xl text-sm leading-6 text-[var(--muted)]">
-            MVP-страница: кнопка пока ведёт к этому блоку, без формы,
-            календаря и платёжных интеграций. Платежи будут проходить только
-            внешне через Tribute или банковский перевод.
+            Оплата проходит вне сайта: через Tribute или банковский перевод.
+            Детали записи и подтверждение оплаты — в Telegram-боте.
           </p>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import anyaProfileImage from '../assets/images/anya-profile-v1.jpg'
+
 export function About() {
   return (
     <section
@@ -8,13 +10,14 @@ export function About() {
         <div>
           <figure
             className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[linear-gradient(150deg,#f7efe4,#e3cdb9_60%,#cda38e)] p-6"
-            aria-label="Блок специалиста Anya Brows"
           >
-            <div className="absolute left-1/2 top-20 h-44 w-44 -translate-x-1/2 rounded-full border border-[rgba(122,62,55,0.18)] bg-[rgba(255,251,245,0.36)]" />
-            <div className="absolute bottom-0 left-1/2 h-56 w-64 -translate-x-1/2 rounded-t-full border border-[rgba(122,62,55,0.18)] bg-[rgba(255,251,245,0.28)]" />
-            <figcaption className="relative z-10 mt-auto inline-flex rounded-full bg-[rgba(255,251,245,0.72)] px-4 py-2 text-sm text-[var(--muted)]">
-              Специалист по восстановлению бровей
-            </figcaption>
+            <img
+              src={anyaProfileImage}
+              alt="Аня, специалист Anya Brows по аппаратному восстановлению бровей"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              loading="lazy"
+              decoding="async"
+            />
           </figure>
           <p className="mt-6 pl-2 font-serif text-[40px] leading-none tracking-[-0.08em] text-[#7A3E37] italic md:text-[56px] lg:pl-4">
             Anya

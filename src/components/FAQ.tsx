@@ -70,14 +70,14 @@ export function FAQ() {
                 <button
                   id={buttonId}
                   type="button"
-                  className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-base font-medium tracking-[-0.02em] text-[var(--text)] transition-colors hover:bg-[rgba(247,241,232,0.42)] sm:gap-5 sm:px-6 sm:text-lg"
+                  className="flex w-full items-center justify-between gap-3 px-4 py-4 text-left text-base font-medium leading-snug tracking-[-0.02em] text-[var(--text)] transition-colors hover:bg-[rgba(247,241,232,0.42)] sm:gap-5 sm:px-6 sm:py-5 sm:text-lg"
                   aria-expanded={isOpen}
                   aria-controls={contentId}
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
                 >
                   {item.question}
                   <span
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[var(--border)] text-[var(--accent)]"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--border)] text-[var(--accent)] sm:h-8 sm:w-8"
                     aria-hidden="true"
                   >
                     {isOpen ? '−' : '+'}
@@ -87,7 +87,7 @@ export function FAQ() {
                   id={contentId}
                   role="region"
                   aria-labelledby={buttonId}
-                  className={`px-5 text-[var(--muted)] sm:px-6 ${
+                  className={`px-4 text-[var(--muted)] sm:px-6 ${
                     isOpen ? 'pb-6' : 'hidden'
                   }`}
                 >

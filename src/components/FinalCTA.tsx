@@ -4,11 +4,11 @@ export function FinalCTA() {
   return (
     <section
       id="contact"
-      className="content-section scroll-mt-28 px-5 pb-12 pt-6 sm:px-8 sm:py-16 lg:px-10"
+      className="content-section scroll-mt-28 px-4 pb-12 pt-6 sm:px-8 sm:py-16 lg:px-10"
     >
-      <div className="reveal hover-lift mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-[var(--border)] bg-[linear-gradient(135deg,#fffbf5_0%,#f1e2d3_58%,#dfc4b4_100%)] p-8 shadow-[var(--shadow-soft)] sm:p-12 lg:p-16">
+      <div className="reveal hover-lift mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[linear-gradient(135deg,#fffbf5_0%,#f1e2d3_58%,#dfc4b4_100%)] p-6 shadow-[var(--shadow-soft)] min-[390px]:p-7 sm:rounded-[2.5rem] sm:p-12 lg:p-16">
         <div className="max-w-4xl">
-          <h2 className="text-4xl font-medium leading-tight tracking-[-0.05em] text-[var(--text)] sm:text-5xl lg:text-6xl">
+          <h2 className="text-[2.15rem] font-medium leading-tight tracking-[-0.05em] text-[var(--text)] sm:text-5xl lg:text-6xl">
             Готовы освоить аппаратное восстановление бровей?
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">

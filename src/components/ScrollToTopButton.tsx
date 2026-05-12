@@ -24,7 +24,7 @@ export function ScrollToTopButton() {
     <button
       type="button"
       aria-label="Вернуться наверх"
-      className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-[#E5D8CA] bg-[#FFFBF5]/90 text-[#7A3E37] shadow-sm backdrop-blur transition hover:bg-[#F7F1E8] focus:outline-none focus:ring-2 focus:ring-[#7A3E37]/30 md:bottom-6 md:right-6 lg:hidden"
+      className="fixed bottom-6 right-6 z-50 hidden h-11 w-11 items-center justify-center rounded-full border border-[#E5D8CA] bg-[#FFFBF5]/90 text-[#7A3E37] shadow-sm backdrop-blur transition hover:bg-[#F7F1E8] focus:outline-none focus:ring-2 focus:ring-[#7A3E37]/30 md:flex lg:hidden"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       <svg

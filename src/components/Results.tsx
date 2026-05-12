@@ -105,7 +105,7 @@ function BeforeAfterImage({
           aria-hidden="true"
         />
       </picture>
-      <span className="absolute bottom-4 left-4 rounded-full bg-[rgba(255,251,245,0.82)] px-4 py-2 text-sm text-[var(--muted)] shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
+      <span className="absolute bottom-3 left-3 rounded-full bg-[rgba(255,251,245,0.82)] px-3 py-1.5 text-xs text-[var(--muted)] shadow-[0_10px_24px_rgba(24,20,17,0.08)] sm:bottom-4 sm:left-4 sm:px-4 sm:py-2 sm:text-sm">
         {label}
       </span>
     </div>

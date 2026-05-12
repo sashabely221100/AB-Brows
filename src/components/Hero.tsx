@@ -67,12 +67,12 @@ export function Hero() {
         </div>
 
         <figure
-          className="reveal reveal-delay-1 hover-lift relative min-h-[420px] overflow-hidden rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow-soft)] sm:min-h-[560px] sm:p-7"
+          className="reveal reveal-delay-1 hover-lift relative min-h-[390px] overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-3 shadow-[var(--shadow-soft)] sm:min-h-[560px] sm:rounded-[2.5rem] sm:p-7"
         >
           <div className="ambient-drift absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ead5c1] blur-3xl" />
           <div className="ambient-drift absolute -bottom-28 left-8 h-80 w-80 rounded-full bg-[#d7b4a2] opacity-60 blur-3xl" />
 
-          <div className="relative h-full min-h-[380px] overflow-hidden rounded-[2rem] border border-[rgba(229,216,202,0.8)] bg-[var(--cream-deep)] sm:min-h-[500px]">
+          <div className="relative h-full min-h-[364px] overflow-hidden rounded-[1.65rem] border border-[rgba(229,216,202,0.8)] bg-[var(--cream-deep)] sm:min-h-[500px] sm:rounded-[2rem]">
             <picture>
               <source
                 type="image/avif"
@@ -89,7 +89,7 @@ export function Hero() {
                 alt="Аппаратное восстановление бровей в процессе процедуры"
                 width="1122"
                 height="1402"
-                className="h-full min-h-[380px] w-full object-cover object-center sm:min-h-[500px]"
+                className="h-full min-h-[364px] w-full object-cover object-center sm:min-h-[500px]"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
@@ -97,11 +97,11 @@ export function Hero() {
             </picture>
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(24,20,17,0.18)_0%,rgba(24,20,17,0.02)_34%,rgba(24,20,17,0.16)_100%)]" />
 
-            <div className="absolute left-5 right-5 top-5 flex items-center justify-between gap-3 text-sm text-[var(--text)] sm:left-6 sm:right-6 sm:top-6">
-              <span className="rounded-full bg-[rgba(255,251,245,0.74)] px-3 py-1 shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
+            <div className="absolute left-4 right-4 top-4 flex items-start justify-between gap-2 text-xs leading-snug text-[var(--text)] min-[390px]:text-[13px] sm:left-6 sm:right-6 sm:top-6 sm:items-center sm:gap-3 sm:text-sm">
+              <span className="max-w-[58%] rounded-2xl bg-[rgba(255,251,245,0.74)] px-3 py-1.5 shadow-[0_10px_24px_rgba(24,20,17,0.08)] sm:max-w-none sm:rounded-full sm:px-3 sm:py-1">
                 Восстановление бровей
               </span>
-              <span className="rounded-full bg-[rgba(255,251,245,0.74)] px-3 py-1 shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
+              <span className="max-w-[34%] whitespace-nowrap rounded-2xl bg-[rgba(255,251,245,0.74)] px-3 py-1.5 text-center shadow-[0_10px_24px_rgba(24,20,17,0.08)] sm:max-w-none sm:rounded-full sm:px-3 sm:py-1">
                 20–25 минут
               </span>
             </div>

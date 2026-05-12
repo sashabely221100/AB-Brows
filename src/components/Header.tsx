@@ -75,19 +75,24 @@ export function Header() {
           aria-label="AB Brows, перейти в начало"
           onClick={closeMenu}
         >
-          <picture className="select-none">
-            <source srcSet={logoMark} media="(max-width: 520px)" />
-            <img
-              src={logo}
-              width="176"
-              height="46"
-              alt="AB Brows"
-              className="pointer-events-none h-10 w-auto select-none sm:h-11"
-              decoding="async"
-              fetchPriority="high"
-              draggable="false"
-            />
-          </picture>
+          <img
+            src={logoMark}
+            width="40"
+            height="40"
+            alt="AB Brows"
+            className="pointer-events-none block h-10 w-10 select-none min-[521px]:hidden"
+            decoding="async"
+            draggable="false"
+          />
+          <img
+            src={logo}
+            width="176"
+            height="46"
+            alt="AB Brows"
+            className="pointer-events-none hidden h-10 w-auto select-none min-[521px]:block sm:h-11"
+            decoding="async"
+            draggable="false"
+          />
         </a>
 
         <nav

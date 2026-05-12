@@ -4,25 +4,75 @@ import caseTwoAfterImage from '../assets/results/result-case-2-after.jpg'
 import caseTwoBeforeImage from '../assets/results/result-case-2-before.jpg'
 import caseThreeAfterImage from '../assets/results/result-case-3-after-v2.jpg'
 import caseThreeBeforeImage from '../assets/results/result-case-3-before.jpg'
+import caseOneAfter480 from '../assets/optimized/result-case-1-after-480.webp'
+import caseOneAfter768 from '../assets/optimized/result-case-1-after-768.webp'
+import caseOneBefore480 from '../assets/optimized/result-case-1-before-480.webp'
+import caseOneBefore768 from '../assets/optimized/result-case-1-before-768.webp'
+import caseTwoAfter480 from '../assets/optimized/result-case-2-after-480.webp'
+import caseTwoAfter768 from '../assets/optimized/result-case-2-after-768.webp'
+import caseTwoBefore480 from '../assets/optimized/result-case-2-before-480.webp'
+import caseTwoBefore768 from '../assets/optimized/result-case-2-before-768.webp'
+import caseThreeAfter480 from '../assets/optimized/result-case-3-after-v2-480.webp'
+import caseThreeAfter768 from '../assets/optimized/result-case-3-after-v2-768.webp'
+import caseThreeAfter1200 from '../assets/optimized/result-case-3-after-v2-1200.webp'
+import caseThreeBefore480 from '../assets/optimized/result-case-3-before-480.webp'
+import caseThreeBefore768 from '../assets/optimized/result-case-3-before-768.webp'
+
+type ResultImage = {
+  src: string
+  srcSet: string
+  width: number
+  height: number
+}
 
 const cases = [
   {
     caption: 'Редкие участки',
     subcaption: 'Реальный пример после 4 процедур',
-    beforeImage: caseOneBeforeImage,
-    afterImage: caseOneAfterImage,
+    beforeImage: {
+      src: caseOneBeforeImage,
+      srcSet: `${caseOneBefore480} 480w, ${caseOneBefore768} 768w`,
+      width: 900,
+      height: 800,
+    },
+    afterImage: {
+      src: caseOneAfterImage,
+      srcSet: `${caseOneAfter480} 480w, ${caseOneAfter768} 768w`,
+      width: 900,
+      height: 800,
+    },
   },
   {
     caption: 'Неравномерная плотность',
     subcaption: 'Реальный пример после 4 процедур',
-    beforeImage: caseTwoBeforeImage,
-    afterImage: caseTwoAfterImage,
+    beforeImage: {
+      src: caseTwoBeforeImage,
+      srcSet: `${caseTwoBefore480} 480w, ${caseTwoBefore768} 768w`,
+      width: 900,
+      height: 800,
+    },
+    afterImage: {
+      src: caseTwoAfterImage,
+      srcSet: `${caseTwoAfter480} 480w, ${caseTwoAfter768} 768w`,
+      width: 900,
+      height: 800,
+    },
   },
   {
     caption: 'Ослабленные после окрашивания',
     subcaption: 'Реальный пример после 4 процедур',
-    beforeImage: caseThreeBeforeImage,
-    afterImage: caseThreeAfterImage,
+    beforeImage: {
+      src: caseThreeBeforeImage,
+      srcSet: `${caseThreeBefore480} 480w, ${caseThreeBefore768} 768w`,
+      width: 900,
+      height: 800,
+    },
+    afterImage: {
+      src: caseThreeAfterImage,
+      srcSet: `${caseThreeAfter480} 480w, ${caseThreeAfter768} 768w, ${caseThreeAfter1200} 1200w`,
+      width: 2759,
+      height: 2069,
+    },
   },
 ]
 
@@ -30,7 +80,7 @@ function BeforeAfterImage({
   image,
   label,
 }: {
-  image: string
+  image: ResultImage
   label: 'До' | 'После'
 }) {
   return (
@@ -38,14 +88,23 @@ function BeforeAfterImage({
       className="relative aspect-[9/8] overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[linear-gradient(145deg,#fff8ef,#ead9c8)]"
       aria-label={`${label}, фото примера процедуры`}
     >
-      <img
-        src={image}
-        alt=""
-        className="h-full w-full object-cover"
-        loading="lazy"
-        decoding="async"
-        aria-hidden="true"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcSet={image.srcSet}
+          sizes="(min-width: 1024px) 14vw, 44vw"
+        />
+        <img
+          src={image.src}
+          alt=""
+          width={image.width}
+          height={image.height}
+          className="h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </picture>
       <span className="absolute bottom-4 left-4 rounded-full bg-[rgba(255,251,245,0.82)] px-4 py-2 text-sm text-[var(--muted)] shadow-[0_10px_24px_rgba(24,20,17,0.08)]">
         {label}
       </span>

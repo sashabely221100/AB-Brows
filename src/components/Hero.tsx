@@ -1,4 +1,13 @@
 import heroProcedureImage from '../assets/images/hero-procedure-v1.jpg'
+import heroProcedureAvif480 from '../assets/optimized/hero-procedure-v1-480.avif'
+import heroProcedureAvif768 from '../assets/optimized/hero-procedure-v1-768.avif'
+import heroProcedureAvif1122 from '../assets/optimized/hero-procedure-v1-1122.avif'
+import heroProcedure480 from '../assets/optimized/hero-procedure-v1-480.webp'
+import heroProcedure768 from '../assets/optimized/hero-procedure-v1-768.webp'
+import heroProcedure1122 from '../assets/optimized/hero-procedure-v1-1122.webp'
+
+const heroProcedureAvifSrcSet = `${heroProcedureAvif480} 480w, ${heroProcedureAvif768} 768w, ${heroProcedureAvif1122} 1122w`
+const heroProcedureSrcSet = `${heroProcedure480} 480w, ${heroProcedure768} 768w, ${heroProcedure1122} 1122w`
 
 const trustBadges = [
   '2,5+ года практики',
@@ -64,13 +73,28 @@ export function Hero() {
           <div className="ambient-drift absolute -bottom-28 left-8 h-80 w-80 rounded-full bg-[#d7b4a2] opacity-60 blur-3xl" />
 
           <div className="relative h-full min-h-[380px] overflow-hidden rounded-[2rem] border border-[rgba(229,216,202,0.8)] bg-[var(--cream-deep)] sm:min-h-[500px]">
-            <img
-              src={heroProcedureImage}
-              alt="Аппаратное восстановление бровей в процессе процедуры"
-              className="h-full min-h-[380px] w-full object-cover object-center sm:min-h-[500px]"
-              decoding="async"
-              fetchPriority="high"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcSet={heroProcedureAvifSrcSet}
+                sizes="(min-width: 1024px) 44vw, calc(100vw - 40px)"
+              />
+              <source
+                type="image/webp"
+                srcSet={heroProcedureSrcSet}
+                sizes="(min-width: 1024px) 44vw, calc(100vw - 40px)"
+              />
+              <img
+                src={heroProcedureImage}
+                alt="Аппаратное восстановление бровей в процессе процедуры"
+                width="1122"
+                height="1402"
+                className="h-full min-h-[380px] w-full object-cover object-center sm:min-h-[500px]"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
+            </picture>
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(24,20,17,0.18)_0%,rgba(24,20,17,0.02)_34%,rgba(24,20,17,0.16)_100%)]" />
 
             <div className="absolute left-5 right-5 top-5 flex items-center justify-between gap-3 text-sm text-[var(--text)] sm:left-6 sm:right-6 sm:top-6">

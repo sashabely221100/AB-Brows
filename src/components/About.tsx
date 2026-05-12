@@ -1,4 +1,13 @@
 import anyaProfileImage from '../assets/images/anya-profile-v1.jpg'
+import anyaProfileAvif480 from '../assets/optimized/anya-profile-v1-480.avif'
+import anyaProfileAvif768 from '../assets/optimized/anya-profile-v1-768.avif'
+import anyaProfileAvif1200 from '../assets/optimized/anya-profile-v1-1200.avif'
+import anyaProfile480 from '../assets/optimized/anya-profile-v1-480.webp'
+import anyaProfile768 from '../assets/optimized/anya-profile-v1-768.webp'
+import anyaProfile1200 from '../assets/optimized/anya-profile-v1-1200.webp'
+
+const anyaProfileAvifSrcSet = `${anyaProfileAvif480} 480w, ${anyaProfileAvif768} 768w, ${anyaProfileAvif1200} 1200w`
+const anyaProfileSrcSet = `${anyaProfile480} 480w, ${anyaProfile768} 768w, ${anyaProfile1200} 1200w`
 
 export function About() {
   return (
@@ -11,13 +20,27 @@ export function About() {
           <figure
             className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[linear-gradient(150deg,#f7efe4,#e3cdb9_60%,#cda38e)] p-6"
           >
-            <img
-              src={anyaProfileImage}
-              alt="Аня, специалист Anya Brows по аппаратному восстановлению бровей"
-              className="absolute inset-0 h-full w-full object-cover object-center"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcSet={anyaProfileAvifSrcSet}
+                sizes="(min-width: 1024px) 36vw, calc(100vw - 88px)"
+              />
+              <source
+                type="image/webp"
+                srcSet={anyaProfileSrcSet}
+                sizes="(min-width: 1024px) 36vw, calc(100vw - 88px)"
+              />
+              <img
+                src={anyaProfileImage}
+                alt="Аня, специалист Anya Brows по аппаратному восстановлению бровей"
+                width="1448"
+                height="1086"
+                className="absolute inset-0 h-full w-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </figure>
           <p className="mt-6 pl-2 font-serif text-[40px] leading-none tracking-[-0.08em] text-[#7A3E37] italic md:text-[56px] lg:pl-4">
             Anya

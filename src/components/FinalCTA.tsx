@@ -4,13 +4,10 @@ export function FinalCTA() {
   return (
     <section
       id="contact"
-      className="content-section scroll-mt-28 px-5 py-12 sm:px-8 sm:py-16 lg:px-10"
+      className="content-section scroll-mt-28 px-5 pb-12 pt-6 sm:px-8 sm:py-16 lg:px-10"
     >
       <div className="reveal hover-lift mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-[var(--border)] bg-[linear-gradient(135deg,#fffbf5_0%,#f1e2d3_58%,#dfc4b4_100%)] p-8 shadow-[var(--shadow-soft)] sm:p-12 lg:p-16">
         <div className="max-w-4xl">
-          <p className="mb-5 text-sm uppercase tracking-[0.28em] text-[var(--accent)]">
-            Следующий шаг
-          </p>
           <h2 className="text-4xl font-medium leading-tight tracking-[-0.05em] text-[var(--text)] sm:text-5xl lg:text-6xl">
             Готовы освоить аппаратное восстановление бровей?
           </h2>

@@ -1,4 +1,5 @@
 import {
+  FileText,
   MonitorPlay,
   PackageCheck,
   PlayCircle,
@@ -64,6 +65,24 @@ export function WhatStudentsGet() {
             отдельному протоколу. Если вам интересен комплекс «брови + волосы»,
             это можно обсудить индивидуально перед записью.
           </p>
+        </article>
+
+        <article className="reveal mt-5 rounded-[1.5rem] border border-[rgba(122,62,55,0.18)] bg-[rgba(234,220,203,0.72)] p-5 shadow-[0_14px_36px_rgba(71,45,32,0.07)] sm:p-6 lg:rounded-[1.75rem]">
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-5">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[rgba(122,62,55,0.16)] bg-[rgba(255,251,245,0.7)] text-[var(--accent)]">
+              <FileText aria-hidden="true" className="h-6 w-6" strokeWidth={1.7} />
+            </div>
+            <div>
+              <h3 className="text-2xl font-medium tracking-[-0.04em] text-[var(--text)]">
+                После обучения у вас остаётся понятный гайд
+              </h3>
+              <p className="mt-3 max-w-4xl leading-7 text-[rgba(24,20,17,0.74)]">
+                В нём собраны все ключевые моменты. Вы
+                сможете возвращаться к гайду после обучения, чтобы увереннее применять
+                услугу в работе.
+              </p>
+            </div>
+          </div>
         </article>
       </div>
     </section>

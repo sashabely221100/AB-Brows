@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, type MouseEvent } from 'react'
 import logoMark from '../assets/logo-ab-mark.svg'
 import logo from '../assets/logo-ab-browws.svg'
+import { FINAL_CTA_ID, scrollToFinalCta } from '../utils/finalCtaScroll'
 
 const navLinks = [
   { href: '#about', label: 'Обо мне' },
@@ -66,6 +67,11 @@ export function Header() {
 
   const closeMenu = () => setIsMenuOpen(false)
 
+  const handleFinalCtaClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    closeMenu()
+    scrollToFinalCta(event)
+  }
+
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[rgba(247,241,232,0.84)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8 lg:px-10">
@@ -111,8 +117,9 @@ export function Header() {
         </nav>
 
         <a
-          href="#contact"
+          href={`#${FINAL_CTA_ID}`}
           className="hover-lift hidden rounded-full bg-[var(--accent)] px-5 py-3 text-center text-sm font-medium text-[var(--surface)] shadow-[0_10px_30px_rgba(122,62,55,0.22)] hover:bg-[#69342f] md:inline-flex"
+          onClick={handleFinalCtaClick}
         >
           Узнать свободные даты
         </a>
@@ -150,9 +157,9 @@ export function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href={`#${FINAL_CTA_ID}`}
               className="mt-2 rounded-full bg-[var(--accent)] px-5 py-4 text-center font-medium text-[var(--surface)] shadow-[0_12px_34px_rgba(122,62,55,0.22)]"
-              onClick={closeMenu}
+              onClick={handleFinalCtaClick}
             >
               Узнать свободные даты
             </a>

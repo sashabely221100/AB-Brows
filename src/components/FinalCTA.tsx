@@ -1,10 +1,12 @@
+import { FINAL_CTA_ID } from '../utils/finalCtaScroll'
+
 const telegramBotUrl = 'https://t.me/ab_browws_booking_bot?start=landing'
 
 export function FinalCTA() {
   return (
     <section
-      id="contact"
-      className="content-section scroll-mt-28 px-4 pb-12 pt-6 sm:px-8 sm:py-16 lg:px-10"
+      id={FINAL_CTA_ID}
+      className="content-section scroll-mt-24 px-4 pb-12 pt-6 sm:px-8 sm:py-16 md:scroll-mt-28 lg:px-10"
     >
       <div className="reveal hover-lift mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[linear-gradient(135deg,#fffbf5_0%,#f1e2d3_58%,#dfc4b4_100%)] p-6 shadow-[var(--shadow-soft)] min-[390px]:p-7 sm:rounded-[2.5rem] sm:p-12 lg:p-16">
         <div className="max-w-4xl">

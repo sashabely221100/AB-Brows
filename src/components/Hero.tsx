@@ -5,7 +5,7 @@ import heroProcedureAvif1122 from '../assets/optimized/hero-procedure-v1-1122.av
 import heroProcedure480 from '../assets/optimized/hero-procedure-v1-480.webp'
 import heroProcedure768 from '../assets/optimized/hero-procedure-v1-768.webp'
 import heroProcedure1122 from '../assets/optimized/hero-procedure-v1-1122.webp'
-import { FINAL_CTA_ID, scrollToFinalCta } from '../utils/finalCtaScroll'
+import { FINAL_CTA_ID, handleFinalCtaScroll } from '../utils/finalCtaScroll'
 
 const heroProcedureAvifSrcSet = `${heroProcedureAvif480} 480w, ${heroProcedureAvif768} 768w, ${heroProcedureAvif1122} 1122w`
 const heroProcedureSrcSet = `${heroProcedure480} 480w, ${heroProcedure768} 768w, ${heroProcedure1122} 1122w`
@@ -40,7 +40,7 @@ export function Hero() {
             <a
               href={`#${FINAL_CTA_ID}`}
               className="hover-lift rounded-full bg-[var(--accent)] px-7 py-4 text-center font-medium text-[var(--surface)] shadow-[0_18px_42px_rgba(122,62,55,0.24)] hover:bg-[#69342f]"
-              onClick={scrollToFinalCta}
+              onClick={handleFinalCtaScroll}
             >
               Узнать свободные даты
             </a>

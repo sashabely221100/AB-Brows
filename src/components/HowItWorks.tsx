@@ -9,7 +9,7 @@ export function HowItWorks() {
   return (
     <section
       id="process"
-      className="content-section scroll-mt-28 px-4 py-10 sm:px-8 sm:py-16 lg:px-10"
+      className="content-section scroll-mt-28 px-4 pb-10 pt-0 sm:px-8 sm:pb-16 sm:pt-0 lg:px-10"
     >
       <div className="reveal hover-lift mx-auto w-full max-w-7xl rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow-soft)] sm:rounded-[2.5rem] sm:p-8 lg:p-10">
         <div className="max-w-3xl">

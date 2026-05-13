@@ -121,11 +121,6 @@ button:focus-visible {
   transform-origin: 50% 55%;
 }
 
-.content-section {
-  content-visibility: auto;
-  contain-intrinsic-size: 760px;
-}
-
 @keyframes fade-up {
   from {
     opacity: 0;

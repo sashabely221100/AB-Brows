@@ -1,20 +1,21 @@
 import {
-  IndicationsIcon,
-  MaterialsSourcingIcon,
-  OnlineMeetingIcon,
-  PracticeVideoIcon,
-  ServiceSystemIcon,
-  TechniqueReviewIcon,
-} from './StudentValueIcons'
+  MonitorPlay,
+  PackageCheck,
+  PlayCircle,
+  ScanSearch,
+  ShieldCheck,
+  Workflow,
+} from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
 const items = [
-  { title: 'Онлайн-обучение в удобном формате', Icon: OnlineMeetingIcon },
-  { title: 'Разбор техники', Icon: TechniqueReviewIcon },
-  { title: 'Материалы и закупка', Icon: MaterialsSourcingIcon },
-  { title: 'Показания и противопоказания', Icon: IndicationsIcon },
-  { title: 'Видео с отработкой на модели', Icon: PracticeVideoIcon },
-  { title: 'Понятная система внедрения услуги', Icon: ServiceSystemIcon },
-]
+  { title: 'Онлайн-обучение в удобном формате', Icon: MonitorPlay },
+  { title: 'Разбор техники', Icon: ScanSearch },
+  { title: 'Материалы и закупка', Icon: PackageCheck },
+  { title: 'Показания и противопоказания', Icon: ShieldCheck },
+  { title: 'Видео с отработкой на модели', Icon: PlayCircle },
+  { title: 'Понятная система внедрения услуги', Icon: Workflow },
+] satisfies { title: string; Icon: LucideIcon }[]
 
 export function WhatStudentsGet() {
   return (
@@ -37,13 +38,17 @@ export function WhatStudentsGet() {
               className="hover-lift flex min-h-48 flex-col items-center justify-center rounded-[1.75rem] border border-[var(--border)] bg-[rgba(255,251,245,0.78)] p-6 text-center shadow-[var(--shadow-card)] sm:min-h-56"
             >
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(239,225,215,0.58)] text-[var(--accent)] sm:h-16 sm:w-16">
-                <Icon className="h-9 w-9 sm:h-10 sm:w-10" />
+                <Icon
+                  aria-hidden="true"
+                  className="h-7 w-7 sm:h-8 sm:w-8"
+                  strokeWidth={1.75}
+                />
               </div>
               <span
                 className="mb-5 block h-px w-14 bg-[var(--accent)] opacity-70"
                 aria-hidden="true"
               />
-              <h3 className="max-w-64 text-xl font-medium tracking-[-0.03em] text-[var(--text)]">
+              <h3 className="min-h-14 max-w-64 text-xl font-medium tracking-[-0.03em] text-[var(--text)]">
                 {title}
               </h3>
             </article>

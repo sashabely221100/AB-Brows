@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://ab-brows.vercel.app/sitemap.xml
